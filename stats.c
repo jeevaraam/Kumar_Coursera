@@ -9,13 +9,11 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Implementation of Statistics operation using C Code
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Jeevaraam Kumar
+ * @date 03-Apr-2020
  *
  */
 
@@ -41,3 +39,39 @@ void main() {
 }
 
 /* Add other Implementation File Code Here */
+
+void print_statistics(unsigned char* arr, int length)
+{
+	
+}
+
+void print_array(unsigned char* arr,int length)
+{
+	
+}
+
+int find_mean(unsigned char* arr, int length)
+{
+	
+}
+
+int find_median(unsigned char*, int length)
+{
+	
+}
+
+int find_maximum(unsigned char* arr, int length)
+{
+	
+}
+
+int find_minimum(unsigned char* arr, int length)
+{
+	
+}
+
+void sort_array(unsigned char* arr, int length)
+{
+	
+}
+
