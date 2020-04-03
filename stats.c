@@ -35,14 +35,27 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-
+  print_statistics(&test,SIZE);
 }
 
 /* Add other Implementation File Code Here */
 
 void print_statistics(unsigned char* arr, int length)
 {
-	
+	int i;
+	printf("Input Array\n");
+	print_array(arr,length);
+	printf("Sorted Array\n");
+	sort_array(arr,length);
+	print_array(arr,length);
+	printf("Mean:\n");
+	printf("%d\n",find_mean(arr,length));
+	printf("Median:\n");
+	printf("%d\n",find_median(arr,length));
+	printf("Maximum Value:\n");
+	printf("%d\n",find_maximum(arr,length));
+	printf("Minimum Value:\n");
+	printf("%d\n",find_minimum(arr,length));
 }
 
 void print_array(unsigned char* arr,int length)
