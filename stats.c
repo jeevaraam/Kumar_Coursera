@@ -42,49 +42,111 @@ void main() {
 
 void print_statistics(unsigned char* arr, int length)
 {
-	int i;
 	printf("Input Array\n");
 	print_array(arr,length);
 	printf("Sorted Array\n");
 	sort_array(arr,length);
 	print_array(arr,length);
 	printf("Mean:\n");
-	printf("%d\n",find_mean(arr,length));
+	printf("%c\n",find_mean(arr,length));
 	printf("Median:\n");
-	printf("%d\n",find_median(arr,length));
+	printf("%c\n",find_median(arr,length));
 	printf("Maximum Value:\n");
-	printf("%d\n",find_maximum(arr,length));
+	printf("%c\n",find_maximum(arr,length));
 	printf("Minimum Value:\n");
-	printf("%d\n",find_minimum(arr,length));
+	printf("%c\n",find_minimum(arr,length));
 }
 
 void print_array(unsigned char* arr,int length)
 {
+	int i;
 	
+	for(i=0;i<length;i++,arr++)
+	{
+		printf("%c\t",&arr);
+	}
 }
 
-int find_mean(unsigned char* arr, int length)
+char find_mean(unsigned char* arr, int length)
 {
+	int i;
+	float avg=0;
 	
+	for(i=0;i<length;i++,arr++)
+	{
+		avg = avg+((float)&arr);
+	}
+	
+	avg = avg/length;
+	
+	return ((char)avg);
 }
 
-int find_median(unsigned char*, int length)
+char find_median(unsigned char* arr, int length)
 {
+	char median=0;
 	
+	if((length%2)==0)
+	{
+		length = length/2;
+		median = ((&(arr+length))+(&(arr+length-1)))/2;
+	}
+	else
+	{
+		length=length/2;
+		median = &(arr+length);
+	}
+	
+	return median;
 }
 
-int find_maximum(unsigned char* arr, int length)
+char find_maximum(unsigned char* arr, int length)
 {
+	char max=&arr;
+	int i;
 	
+	for(i=0;i<length;i++,arr++)
+	{
+		if((&arr)>max)
+		{
+			max=&arr;
+		}
+	}
+	
+	return max;
 }
 
-int find_minimum(unsigned char* arr, int length)
+char find_minimum(unsigned char* arr, int length)
 {
+	char min=&arr;
+	int i;
 	
+	for(i=0;i<length;i++,arr++)
+	{
+		if((&arr)<min)
+		{
+			min=&arr;
+		}
+	}
+	
+	return min;
 }
 
 void sort_array(unsigned char* arr, int length)
 {
+	int i,j;
+	char z;
 	
+	for(i=0;i<length;i++)
+	{
+		for(j=i+1;j<length;j++)
+		{
+			if(&(arr+i)<&(arr+j))
+			{
+				z = &(arr+i);
+				*(arr+i) = &(arr+j);
+				*(arr+j) = z;
+			}
+		}
+	}
 }
-

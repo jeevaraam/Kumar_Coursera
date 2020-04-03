@@ -25,7 +25,7 @@
 /**
  * @brief Print the Mean, Median and Mode of given array
  *  
- * The function calls the corresponding stastical functions for calculation of Mean, Median and Mode of given array
+ * The function calls the corresponding statistical functions for calculation of Mean, Median and Mode of given array
  *
  * @param arr Input array
  * @param length Length of the array
@@ -59,7 +59,7 @@
  * @return median value of the given array
  */
  
- int find_median(unsigned char*, int length);
+ char find_median(unsigned char* arr, int length);
  
  /**
  * @brief Calculate the mean and return the mean of given array
@@ -72,7 +72,7 @@
  * @return mean value of the given array
  */
  
- int find_mean(unsigned char*, int length);
+ char find_mean(unsigned char* arr, int length);
  
  /**
  * @brief Find the maximum value and return the same
@@ -85,7 +85,7 @@
  * @return maximum value of the given array
  */
  
- int find_maximum(unsigned char*, int length);
+ char find_maximum(unsigned char* arr, int length);
  
  /**
  * @brief Find the minimum value and return the same
@@ -98,7 +98,7 @@
  * @return minimum value of the given array
  */
  
- int find_minimum(unsigned char*, int length);
+ char find_minimum(unsigned char* arr, int length);
  
  /**
  * @brief Sorts the given array in descending order
@@ -111,5 +111,6 @@
  * @return void
  */
  
- void sort_array(unsigned char*, int length);
+ void sort_array(unsigned char* arr, int length);
+ 
 #endif /* __STATS_H__ */
