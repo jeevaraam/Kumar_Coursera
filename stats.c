@@ -25,7 +25,6 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
-char sorted[SIZE];
 void main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
